@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 import subprocess
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def hello_world():
     return 'Deployed'
 
-@app.route('/run_script', methods=['POST'])
+@application.route('/run_script', methods=['POST'])
 def run_script():
     try:
         # Retrieve the request data
